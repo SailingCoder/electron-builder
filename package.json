@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start",
+  "name": "myapp",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -7,7 +7,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "dmg": "electron-installer-dmg ./out/electron-quick-start-darwin-x64/electron-quick-start.app myapp"
+    "dmg": "electron-installer-dmg ./out/myapp-darwin-x64/myapp.app myapp"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
