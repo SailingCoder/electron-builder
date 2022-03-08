@@ -7,7 +7,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "dmg": "appdmg ./build/appdmg.json ~/Desktop/test99.dmg"
+    "dmg": "appdmg ./build/appdmg.json ~/Desktop/myapp.dmg"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
