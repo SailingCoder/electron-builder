@@ -6,3 +6,10 @@
 // process.
 
 
+const { ipcRenderer } = require('electron')
+
+const newWindowBtn = document.getElementById('new-window')
+newWindowBtn.addEventListener('click', (event) => {
+    console.log(999999)
+    ipcRenderer.send('addBWindow');
+  })

@@ -33,34 +33,22 @@ function createWindow () {
   // })
   // mainWindow2.loadFile('index2.html')
 
-  const mainWindow3 = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      webSecurity: false,
-      nodeIntegration: true,
-      webviewTag: true,
-      nodeIntegrationInWorker: true,
-      affinity: 'browserviewandwindow',
-    }
-
-  })
-  mainWindow3.loadFile('index3.html')
-  mainWindow3.webContents.openDevTools();
-
+  createBWindow()
+  createBWindow()
+ 
+  createBWindow3();
   // and load the index.html of the app.
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
 
-ipcMain.on('addBWindow', () => {
-  const mainWindow = new BrowserWindow({
+function createBWindow3() {
+  const mainWindow3 = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
+      // preload: path.join(__dirname, 'preload.js'),
       webSecurity: false,
       nodeIntegration: true,
       webviewTag: true,
@@ -69,7 +57,30 @@ ipcMain.on('addBWindow', () => {
     }
 
   })
-  mainWindow.loadFile('index.html')
+  mainWindow3.loadFile('index3.html');
+   // mainWindow3.webContents.openDevTools();
+}
+
+function createBWindow() {
+  const mainWindow3 = new BrowserWindow({
+    width: 800,
+    height: 600,
+    // frame: false,
+    webPreferences: {
+      // preload: path.join(__dirname, 'preload.js'),
+      webSecurity: false,
+      nodeIntegration: true,
+      webviewTag: true,
+      nodeIntegrationInWorker: true,
+      affinity: 'browserviewandwindow',
+    }
+  })
+  mainWindow3.loadFile('index.html');
+   // mainWindow3.webContents.openDevTools();
+}
+
+ipcMain.on('addBWindow', () => {
+  createBWindow()
 })
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
