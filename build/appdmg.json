@@ -1,0 +1,14 @@
+{
+    "title": "test11.4.5",
+    "contents": [
+      { "x": 380, "y": 170, "type": "link", "path": "/Applications" },
+      { "x": 200, "y": 170, "type": "file", "path": "./../out/test11.4.5/test11.4.5.app" }
+    ],
+    "window": {
+        "size": {
+            "width": 580,
+            "height": 360
+        }
+    },
+    "format": "UDBZ"
+}
