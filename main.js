@@ -2,81 +2,18 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
-function createWindow () {
-  // Create the browser window.
-  // const mainWindow = new BrowserWindow({
-  //   width: 800,
-  //   height: 600,
-  //   webPreferences: {
-  //     preload: path.join(__dirname, 'preload.js'),
-  //     webSecurity: false,
-  //     nodeIntegration: true,
-  //     webviewTag: true,
-  //     nodeIntegrationInWorker: true,
-  //     affinity: 'browserviewandwindow',
-  //   }
-
-  // })
-  // mainWindow.loadFile('index.html')
-
-  // const mainWindow2 = new BrowserWindow({
-  //   width: 800,
-  //   height: 600,
-  //   webPreferences: {
-  //     preload: path.join(__dirname, 'preload.js'),
-  //     webSecurity: false,
-  //     nodeIntegration: true,
-  //     webviewTag: true,
-  //     nodeIntegrationInWorker: true,
-  //     affinity: 'browserviewandwindow',
-  //   }
-  // })
-  // mainWindow2.loadFile('index2.html')
-
-  createBWindow()
-  createBWindow()
- 
-  createBWindow3();
-  // and load the index.html of the app.
-
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
-}
-
-function createBWindow3() {
-  const mainWindow3 = new BrowserWindow({
+function createWindow() {
+  const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      // preload: path.join(__dirname, 'preload.js'),
       webSecurity: false,
       nodeIntegration: true,
       webviewTag: true,
       nodeIntegrationInWorker: true,
-      affinity: 'browserviewandwindow',
-    }
-
-  })
-  mainWindow3.loadFile('index3.html');
-   // mainWindow3.webContents.openDevTools();
-}
-
-function createBWindow() {
-  const mainWindow3 = new BrowserWindow({
-    width: 800,
-    height: 600,
-    // frame: false,
-    webPreferences: {
-      // preload: path.join(__dirname, 'preload.js'),
-      webSecurity: false,
-      nodeIntegration: true,
-      webviewTag: true,
-      nodeIntegrationInWorker: true,
-      affinity: 'browserviewandwindow',
     }
   })
-  mainWindow3.loadFile('index.html');
-   // mainWindow3.webContents.openDevTools();
+  mainWindow.loadFile('index.html');
 }
 
 ipcMain.on('addBWindow', () => {
