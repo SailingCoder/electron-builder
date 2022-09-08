@@ -13,23 +13,25 @@ npm install
 npm start
 ```
 
-## build mac dmg
+### make
 
 ```bash
 # make out
 npm run make
+```
+### build windows exe
+
+```bash
+# build exe
+npm run package
+```
+
+### build mac dmg
+
+```bash
 # build dmg
 npm run dmg
 ```
 
 > mac打包dmg，必须在mac电脑
 
-## build windows exe
-
-```bash
-# build exe
-npm run package
-
-```
-
-> windows打包exe，必须在windows电脑
